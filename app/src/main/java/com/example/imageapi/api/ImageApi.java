@@ -11,5 +11,8 @@ public interface ImageApi {
     Call<ImageResponse> getImages(@Query("key") String apiKey);
 
     @GET("/api")
-    Call<ImageResponse> getImagesByType(@Query("key") String apiKey, @Query("image_type") String imageType);
+    Call<ImageResponse> getImagesByType(
+            @Query("key") String apiKey,
+            @Query("image_type") String imageType,
+            @Query("q") String query);
 }
